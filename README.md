@@ -88,13 +88,13 @@ DSA/
 - Binary Search Tree (BST)
 - AVL Tree
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Language:** Java
 - **Version Control:** Git & GitHub
 - **IDE:** Visual Studio Code
 
-## ▶️ How to Run
+## How to Run
 
 1. Clone the repository:
 

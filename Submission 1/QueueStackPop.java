@@ -49,6 +49,5 @@ public class QueueStackPop {
         st.pop();
         System.out.println("after popping:");
         st.display();
-
     }
 }

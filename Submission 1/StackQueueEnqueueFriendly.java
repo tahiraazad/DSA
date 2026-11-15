@@ -14,7 +14,6 @@ class StackQueueEnqueueFriendly {
             if (s1.isEmpty() && s2.isEmpty()) {
                 return;
             }
-
             if (s2.isEmpty()) {
                 while (!s1.isEmpty()) {
                     s2.push(s1.pop());
@@ -22,20 +21,17 @@ class StackQueueEnqueueFriendly {
             }
             s2.pop();
         }
-        int front() {
-            if (!s2.isEmpty()) {
-                return s2.peek();
+        void display() {
+            if (s1.isEmpty() && s2.isEmpty()) {
+                System.out.println("queue is empty");
+                return;
             }
-            if (!s1.isEmpty()) {
-                while (!s1.isEmpty()) {
-                    s2.push(s1.pop());
-                }
-                return s2.peek();
+            for (int i = s2.size() - 1; i >= 0; i--) {
+                System.out.print(s2.get(i));
             }
-            return -1; 
-        }
-        int size() {
-            return s1.size() + s2.size();
+            for (int i = 0; i < s1.size(); i++) {
+                System.out.print(s1.get(i));
+            }
         }
     }
 
@@ -46,12 +42,11 @@ class StackQueueEnqueueFriendly {
         q.enqueue(2);
         q.enqueue(3);
 
-        System.out.println("Front: " + q.front()); 
-        System.out.println("Size: " + q.size());  
-
+        System.out.println("elements: ");
+        q.display(); 
+        System.out.println();
         q.dequeue();          
-        System.out.println("Front: " + q.front()); 
-        System.out.println("Size: " + q.size());   
-       
+        System.out.println("elements after dequeue: ");
+        q.display();
     }
 }

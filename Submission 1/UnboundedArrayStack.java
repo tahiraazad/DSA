@@ -29,9 +29,6 @@ class UnboundedArrayStack {
         return arr.isEmpty();
     }
 
-    int size() {
-        return arr.size();
-    }
 
     public static void main(String[] args) {
         UnboundedArrayStack st = new UnboundedArrayStack();
@@ -44,6 +41,5 @@ class UnboundedArrayStack {
         System.out.println("popped: " + st.pop());
         System.out.println("top element: " + st.peek());
         System.out.println("is stack empty: " + (st.isEmpty() ? "yes" : "no"));
-        System.out.println("current size: " + st.size());
     }
 }
